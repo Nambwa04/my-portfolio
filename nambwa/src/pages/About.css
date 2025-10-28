@@ -1,0 +1,366 @@
+.about-page {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.about-page h1 {
+  margin-bottom: 1.5rem;
+  font-size: 3rem;
+  color: #ffffff;
+  font-weight: 700;
+  animation: slideInLeft 0.6s ease-out;
+}
+
+.about-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-image-container {
+  flex-shrink: 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid rgba(65, 105, 225, 0.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeInScale 0.8s ease-out;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 25%;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.about-page h2 {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 600;
+  position: relative;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-page h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #4169e1, #6b8ff5);
+  margin: 0.75rem auto 0;
+  border-radius: 2px;
+}
+
+.about-intro {
+  margin-bottom: 3rem;
+  line-height: 1.8;
+  background: linear-gradient(
+    135deg,
+    rgba(65, 105, 225, 0.05),
+    rgba(65, 105, 225, 0.02)
+  );
+  border: 1px solid rgba(65, 105, 225, 0.15);
+  border-radius: 16px;
+  padding: 2.5rem;
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+  position: relative;
+}
+
+.about-intro p {
+  margin-bottom: 1.5rem;
+  color: #d1d5db;
+  font-size: 1.05rem;
+}
+
+.about-intro p:last-child {
+  margin-bottom: 0;
+}
+
+.about-intro strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Skills Showcase */
+.skills-showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.skill-category-card {
+  background: linear-gradient(
+    135deg,
+    rgba(65, 105, 225, 0.1) 0%,
+    rgba(65, 105, 225, 0.05) 100%
+  );
+  border: 1px solid rgba(65, 105, 225, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  animation: fadeInScale 0.6s ease-out both;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.skill-category-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.skill-category-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.skill-category-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.skill-category-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #4169e1, #6b8ff5);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.skill-category-card:hover::before {
+  transform: scaleX(1);
+}
+
+.skill-category-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(65, 105, 225, 0.4);
+  box-shadow: 0 15px 40px rgba(65, 105, 225, 0.25);
+  background: linear-gradient(
+    135deg,
+    rgba(65, 105, 225, 0.15) 0%,
+    rgba(65, 105, 225, 0.08) 100%
+  );
+}
+
+.category-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.skill-category-card h3 {
+  color: #ffffff;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.skill-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.skill-bar-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skill-label {
+  color: #d1d5db;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.skill-bar-bg {
+  width: 100%;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4169e1, #6b8ff5);
+  border-radius: 10px;
+  transition: width 1s ease-out;
+  position: relative;
+  /* Remove shimmer animation for static bars */
+}
+
+/* shimmer animation removed */
+
+/* Education Section */
+.education-section {
+  background: linear-gradient(
+    135deg,
+    rgba(65, 105, 225, 0.08),
+    rgba(65, 105, 225, 0.03)
+  );
+  border: 1px solid rgba(65, 105, 225, 0.2);
+  border-left: 4px solid #4169e1;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  animation: fadeInUp 0.6s ease-out 0.4s both;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.education-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(65, 105, 225, 0.1),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.education-section:hover::before {
+  left: 100%;
+}
+
+.education-section:hover {
+  transform: translateX(5px);
+  border-color: rgba(65, 105, 225, 0.4);
+  box-shadow: 0 8px 25px rgba(65, 105, 225, 0.2);
+}
+
+.education-section h3 {
+  color: #ffffff;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.institution {
+  color: #4169e1;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  font-size: 1.05rem;
+}
+
+.duration {
+  color: #9ea0a8;
+  font-style: italic;
+}
+
+/* What I Do Section */
+.about-page > p:last-of-type {
+  color: #d1d5db;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  background: linear-gradient(
+    135deg,
+    rgba(65, 105, 225, 0.05),
+    rgba(65, 105, 225, 0.02)
+  );
+  border: 1px solid rgba(65, 105, 225, 0.15);
+  border-radius: 12px;
+  padding: 2rem;
+  animation: fadeInUp 0.6s ease-out 0.5s both;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-page h1 {
+    text-align: center;
+  }
+
+  .skills-showcase {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .skill-category-card {
+    padding: 1.5rem;
+  }
+
+  .category-icon {
+    font-size: 2rem;
+  }
+
+  .about-page h2 {
+    font-size: 1.5rem;
+  }
+}

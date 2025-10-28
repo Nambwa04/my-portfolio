@@ -1,0 +1,16 @@
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-nav a {
+  margin-left: 1rem;
+  color: #cfcfcf;
+  text-decoration: none;
+}
+.main-nav a.active {
+  color: #3b82f6;
+}
+.logo {
+  font-size: 1.25rem;
+}
